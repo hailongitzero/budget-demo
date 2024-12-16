@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { BudgetService } from '../../../core/services/budget.service';
 import { BudgetCategory } from '../../models/budget-category';
+import { FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-budget-table',
-  imports: [],
+  imports: [NgFor, FormsModule],
   templateUrl: './budget-table.component.html',
   styleUrl: './budget-table.component.css',
 })

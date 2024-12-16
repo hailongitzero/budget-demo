@@ -1,13 +1,53 @@
 <table class="table-auto w-full text-left">
   <thead>
     <tr>
-      <th class="px-4 py-2 border-r"></th>
-      <th class="px-4 py-2 border-r"></th>
-      <th class="px-4 py-2 border-r"></th>
-      <th class="px-4 py-2">date</th>
+      <th class="px-4 py-2 border-r">Period</th>
+      <th class="px-4 py-2 border-r">1</th>
+      <th class="px-4 py-2 border-r">2</th>
+      <th class="px-4 py-2 border-r">3</th>
+      <th class="px-4 py-2 border-r">4</th>
+      <th class="px-4 py-2 border-r">5</th>
+      <th class="px-4 py-2 border-r">6</th>
+      <th class="px-4 py-2 border-r">7</th>
+      <th class="px-4 py-2 border-r">8</th>
+      <th class="px-4 py-2 border-r">9</th>
+      <th class="px-4 py-2 border-r">10</th>
+      <th class="px-4 py-2 border-r">11</th>
+      <th class="px-4 py-2 border-r">12</th>
     </tr>
   </thead>
-  <tbody class="text-gray-600">
+  <ng-container *ngFor="let category of datastore">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 border-r">{{ category.Category }}</th>
+        <th class="px-4 py-2 border-r" colspan="12"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of category.Details">
+        <td class="border border-l-0 px-4 py-2 text-center text-green-500">
+          {{ detail.Category }}
+        </td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+      </tr>
+      <tr>
+        <td>add sub category</td>
+        <td colspan="12"></td>
+      </tr>
+    </tbody>
+  </ng-container>
+  <!-- <tbody class="text-gray-600">
     <tr>
       <td class="border border-l-0 px-4 py-2 text-center text-green-500">
         <i class="fad fa-circle"></i>
@@ -74,5 +114,5 @@
         <span class="num-2"></span> minutes ago
       </td>
     </tr>
-  </tbody>
+  </tbody> -->
 </table>

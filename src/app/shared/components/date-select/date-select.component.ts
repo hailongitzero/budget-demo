@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DateSelect } from '../../models/date-select';
 import { DateService } from '../../../core/services/date.service';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-date-select',
-  imports: [NgFor, FormsModule],
+  imports: [NgFor, NgIf, FormsModule],
   templateUrl: './date-select.component.html',
   styleUrl: './date-select.component.css',
 })
