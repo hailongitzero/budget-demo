@@ -1,0 +1,158 @@
+[
+  {
+    "Category": "Income",
+    "Type": "master",
+    "Details": [
+      {
+        "Category": "General Income",
+        "Type": "sub",
+        "Details": [
+          {
+            "Category": "Sales",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          {
+            "Category": "Commission",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      },
+      {
+        "Category": "Other Income",
+        "Type": "sub",
+        "Details": [
+          {
+            "Category": "Training",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          {
+            "Category": "Consluting",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Category": "Expenses",
+    "Type": "master",
+    "Details": [
+      {
+        "Category": "Operational Expenses",
+        "Type": "sub",
+        "Details": [
+          {
+            "Category": "Management Fees",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          {
+            "Category": "Cloud Hosting",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      },
+      {
+        "Category": "Salaries & Wages",
+        "Type": "sub",
+        "Details": [
+          {
+            "Category": "Full Time Dev Salaries",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          },
+          {
+            "Category": "Part Time Dev Salaries",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      }
+    ]
+  }
+]
