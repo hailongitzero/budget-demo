@@ -3,6 +3,7 @@ import { BudgetService } from '../../../core/services/budget.service';
 import { BudgetCategory } from '../../models/budget-category';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { Utils } from '../../utils/utils';
 
 @Component({
   selector: 'app-budget-table',
@@ -12,13 +13,18 @@ import { NgFor } from '@angular/common';
 })
 export class BudgetTableComponent {
   datastore: BudgetCategory[] = [];
+  dateRange: string[] = [];
+
   constructor(private service: BudgetService) {}
 
   ngOnInit() {
+    this.getInitData();
+  }
+
+  getInitData() {
     this.service.getData().subscribe({
       next: (res) => {
         this.datastore = res;
-        console.log(this.datastore);
       },
       error: (err) => {
         console.log(err);
@@ -28,6 +34,8 @@ export class BudgetTableComponent {
   }
 
   onDateChange(startMonth: number, endMonth: number) {
-    console.log(startMonth + '===' + endMonth);
+    this.dateRange = Utils.getMonthsInRange(startMonth, endMonth);
   }
+
+  onInputChange() {}
 }

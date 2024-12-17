@@ -2,18 +2,9 @@
   <thead>
     <tr>
       <th class="px-4 py-2 border-r">Period</th>
-      <th class="px-4 py-2 border-r">1</th>
-      <th class="px-4 py-2 border-r">2</th>
-      <th class="px-4 py-2 border-r">3</th>
-      <th class="px-4 py-2 border-r">4</th>
-      <th class="px-4 py-2 border-r">5</th>
-      <th class="px-4 py-2 border-r">6</th>
-      <th class="px-4 py-2 border-r">7</th>
-      <th class="px-4 py-2 border-r">8</th>
-      <th class="px-4 py-2 border-r">9</th>
-      <th class="px-4 py-2 border-r">10</th>
-      <th class="px-4 py-2 border-r">11</th>
-      <th class="px-4 py-2 border-r">12</th>
+      <th class="px-4 py-2 border-r" *ngFor="let date of dateRange">
+        {{ date }}-2024
+      </th>
     </tr>
   </thead>
   <ng-container *ngFor="let category of datastore">
@@ -28,22 +19,72 @@
         <td class="border border-l-0 px-4 py-2 text-center text-green-500">
           {{ detail.Category }}
         </td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
-        <td class="border border-l-0 px-4 py-2">{{ detail.Jan }}</td>
+        <td class="border border-l-0 px-4 py-2" *ngFor="let date of dateRange">
+          <input
+            *ngIf="date === 'Jan'"
+            [(ngModel)]="detail.Jan"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Feb'"
+            [(ngModel)]="detail.Feb"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Mar'"
+            [(ngModel)]="detail.Mar"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Apr'"
+            [(ngModel)]="detail.Apr"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'May'"
+            [(ngModel)]="detail.May"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Jun'"
+            [(ngModel)]="detail.Jun"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Jul'"
+            [(ngModel)]="detail.Jul"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Aug'"
+            [(ngModel)]="detail.Aug"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Sep'"
+            [(ngModel)]="detail.Sep"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Oct'"
+            [(ngModel)]="detail.Oct"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Nov'"
+            [(ngModel)]="detail.Nov"
+            (input)="onInputChange()"
+          />
+          <input
+            *ngIf="date === 'Dec'"
+            [(ngModel)]="detail.Dec"
+            (input)="onInputChange()"
+          />
+        </td>
       </tr>
       <tr>
         <td>add sub category</td>
-        <td colspan="12"></td>
+        <td [attr.colspan]="dateRange.length"></td>
       </tr>
     </tbody>
   </ng-container>
