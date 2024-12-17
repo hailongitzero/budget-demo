@@ -37,7 +37,21 @@
             "Nov": 0,
             "Dec": 0
           }
-        ]
+        ],
+        "Sum": {
+          "Jan": 0,
+          "Feb": 0,
+          "Mar": 0,
+          "Apr": 0,
+          "May": 0,
+          "Jun": 0,
+          "Jul": 0,
+          "Aug": 0,
+          "Sep": 0,
+          "Oct": 0,
+          "Nov": 0,
+          "Dec": 0
+        }
       },
       {
         "Category": "Other Income",
@@ -73,9 +87,38 @@
             "Nov": 0,
             "Dec": 0
           }
-        ]
+        ],
+        "Sum": {
+          "Jan": 0,
+          "Feb": 0,
+          "Mar": 0,
+          "Apr": 0,
+          "May": 0,
+          "Jun": 0,
+          "Jul": 0,
+          "Aug": 0,
+          "Sep": 0,
+          "Oct": 0,
+          "Nov": 0,
+          "Dec": 0
+        }
       }
-    ]
+    ],
+    "Sum": {
+      "Name": "Total Income",
+      "Jan": 0,
+      "Feb": 0,
+      "Mar": 0,
+      "Apr": 0,
+      "May": 0,
+      "Jun": 0,
+      "Jul": 0,
+      "Aug": 0,
+      "Sep": 0,
+      "Oct": 0,
+      "Nov": 0,
+      "Dec": 0
+    }
   },
   {
     "Category": "Expenses",
@@ -115,7 +158,21 @@
             "Nov": 0,
             "Dec": 0
           }
-        ]
+        ],
+        "Sum": {
+          "Jan": 0,
+          "Feb": 0,
+          "Mar": 0,
+          "Apr": 0,
+          "May": 0,
+          "Jun": 0,
+          "Jul": 0,
+          "Aug": 0,
+          "Sep": 0,
+          "Oct": 0,
+          "Nov": 0,
+          "Dec": 0
+        }
       },
       {
         "Category": "Salaries & Wages",
@@ -138,6 +195,110 @@
           },
           {
             "Category": "Part Time Dev Salaries",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ],
+        "Sum": {
+          "Jan": 0,
+          "Feb": 0,
+          "Mar": 0,
+          "Apr": 0,
+          "May": 0,
+          "Jun": 0,
+          "Jul": 0,
+          "Aug": 0,
+          "Sep": 0,
+          "Oct": 0,
+          "Nov": 0,
+          "Dec": 0
+        }
+      }
+    ]
+  },
+  {
+    "Category": "Total Expenses",
+    "Type": "total",
+    "Details": [
+      {
+        "Category": "Total Expenses",
+        "Type": "expenses",
+        "Details": [
+          {
+            "Category": "Total Expenses",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      },
+      {
+        "Category": "Profit/Loss",
+        "Type": "profit",
+        "Details": [
+          {
+            "Category": "Profit/Loss",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      },
+      {
+        "Category": "Opening Blance",
+        "Type": "opening",
+        "Details": [
+          {
+            "Category": "Opening Blance",
+            "Jan": 0,
+            "Feb": 0,
+            "Mar": 0,
+            "Apr": 0,
+            "May": 0,
+            "Jun": 0,
+            "Jul": 0,
+            "Aug": 0,
+            "Sep": 0,
+            "Oct": 0,
+            "Nov": 0,
+            "Dec": 0
+          }
+        ]
+      },
+      {
+        "Category": "Closing Blance",
+        "Type": "closing",
+        "Details": [
+          {
+            "Category": "Closing Blance",
             "Jan": 0,
             "Feb": 0,
             "Mar": 0,

@@ -1,0 +1,26 @@
+<!-- Overlay Background -->
+<div
+  class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50"
+>
+  <!-- Modal Container -->
+  <div class="bg-white rounded-lg shadow-lg w-1/3 p-6">
+    <!-- Modal Body -->
+    <div class="mt-4">Apply to all</div>
+
+    <!-- Modal Footer -->
+    <div class="flex justify-end mt-4">
+      <button
+        (click)="closeModal()"
+        class="rounded-md bg-white mr-2 px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+      >
+        No
+      </button>
+      <button
+        class="rounded-md bg-blue px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+        (click)="apply()"
+      >
+        Yes
+      </button>
+    </div>
+  </div>
+</div>

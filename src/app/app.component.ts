@@ -20,7 +20,6 @@ export class AppComponent {
   ngOnInit() {}
 
   onDateChange() {
-    console.log('s:' + this.startMonth + '===' + this.endMonth);
     this.budgetTable?.onDateChange(this.startMonth, this.endMonth);
   }
 }

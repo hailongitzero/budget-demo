@@ -34,7 +34,11 @@
           </div>
         </div>
 
-        <app-budget-table #budgetTable></app-budget-table>
+        <app-budget-table
+          #budgetTable
+          [startMonth]="startMonth"
+          [endMonth]="endMonth"
+        ></app-budget-table>
       </div>
       <!-- End Recent Sales -->
     </div>

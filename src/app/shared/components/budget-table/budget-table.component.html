@@ -1,160 +1,190 @@
-<table class="table-auto w-full text-left">
-  <thead>
-    <tr>
-      <th class="px-4 py-2 border-r">Period</th>
-      <th class="px-4 py-2 border-r" *ngFor="let date of dateRange">
-        {{ date }}-2024
-      </th>
-    </tr>
-  </thead>
-  <ng-container *ngFor="let category of datastore">
+<div>
+  <table class="table-auto w-full text-left text-sm">
     <thead>
       <tr>
-        <th class="px-4 py-2 border-r">{{ category.Category }}</th>
-        <th class="px-4 py-2 border-r" colspan="12"></th>
+        <th class="px-4 py-2 border border-r">Period</th>
+        <th class="px-4 py-2 border border-r" *ngFor="let date of dateRange">
+          {{ date }}-2024
+        </th>
+        <th class="border"></th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let detail of category.Details">
-        <td class="border border-l-0 px-4 py-2 text-center text-green-500">
-          {{ detail.Category }}
-        </td>
-        <td class="border border-l-0 px-4 py-2" *ngFor="let date of dateRange">
-          <input [(ngModel)]="detail[date]" (input)="onInputChange()" />
-          <!-- <input
-            *ngIf="date === 'Jan'"
-            [(ngModel)]="detail.Jan"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Feb'"
-            [(ngModel)]="detail.Feb"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Mar'"
-            [(ngModel)]="detail.Mar"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Apr'"
-            [(ngModel)]="detail.Apr"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'May'"
-            [(ngModel)]="detail.May"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Jun'"
-            [(ngModel)]="detail.Jun"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Jul'"
-            [(ngModel)]="detail.Jul"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Aug'"
-            [(ngModel)]="detail.Aug"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Sep'"
-            [(ngModel)]="detail.Sep"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Oct'"
-            [(ngModel)]="detail.Oct"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Nov'"
-            [(ngModel)]="detail.Nov"
-            (input)="onInputChange()"
-          />
-          <input
-            *ngIf="date === 'Dec'"
-            [(ngModel)]="detail.Dec"
-            (input)="onInputChange()"
-          /> -->
-        </td>
-      </tr>
-      <tr>
-        <td>add sub category</td>
-        <td [attr.colspan]="dateRange.length"></td>
-      </tr>
-    </tbody>
-  </ng-container>
-  <!-- <tbody class="text-gray-600">
-    <tr>
-      <td class="border border-l-0 px-4 py-2 text-center text-green-500">
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 px-4 py-2">
-        Lightning to USB-C Adapter Lightning.
-      </td>
-      <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-      <td class="border border-l-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-    <tr>
-      <td class="border border-l-0 px-4 py-2 text-center text-yellow-500">
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 px-4 py-2">Apple iPhone 8.</td>
-      <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-      <td class="border border-l-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-    <tr>
-      <td class="border border-l-0 px-4 py-2 text-center text-green-500">
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 px-4 py-2">Apple MacBook Pro.</td>
-      <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-      <td class="border border-l-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-    <tr>
-      <td class="border border-l-0 px-4 py-2 text-center text-red-500">
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 px-4 py-2">Samsung Galaxy S9.</td>
-      <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-      <td class="border border-l-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-    <tr>
-      <td class="border border-l-0 px-4 py-2 text-center text-yellow-500">
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 px-4 py-2">Samsung Galaxy S8 256GB.</td>
-      <td class="border border-l-0 px-4 py-2">$<span class="num-2"></span></td>
-      <td class="border border-l-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-    <tr>
-      <td
-        class="border border-l-0 border-b-0 px-4 py-2 text-center text-green-500"
-      >
-        <i class="fad fa-circle"></i>
-      </td>
-      <td class="border border-l-0 border-b-0 px-4 py-2">apple watch.</td>
-      <td class="border border-l-0 border-b-0 px-4 py-2">
-        $<span class="num-2"></span>
-      </td>
-      <td class="border border-l-0 border-b-0 border-r-0 px-4 py-2">
-        <span class="num-2"></span> minutes ago
-      </td>
-    </tr>
-  </tbody> -->
-</table>
+    <ng-container *ngFor="let category of datastore">
+      <!-- master category -->
+      <ng-container *ngIf="category.Type === 'master'">
+        <thead>
+          <tr>
+            <th
+              class="font-bold text-base px-4 py-2 border border-r"
+              [attr.colspan]="dateRange.length + 2"
+            >
+              {{ category.Category }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container
+            *ngFor="let subCategory of category.Details; index as i"
+          >
+            <!-- header -->
+            <tr *ngIf="subCategory.Type === 'sub'">
+              <td
+                class="font-semibold border border border-l-0 px-4 py-2"
+                [attr.colspan]="dateRange.length + 1"
+              >
+                <input
+                  type="text"
+                  [(ngModel)]="subCategory.Category"
+                  class="bg-transparent border-none w-full focus:outline-none"
+                />
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  (click)="removeMasterCategory(category.Category, i)"
+                >
+                  -
+                </button>
+              </td>
+            </tr>
+            <!-- input -->
+            <ng-container
+              *ngFor="let detail of subCategory.Details; index as i"
+            >
+              <tr>
+                <td class="border border border-l-0 px-4 py-2">
+                  <input
+                    type="text"
+                    [(ngModel)]="detail.Category"
+                    class="bg-transparent border-none w-full focus:outline-none"
+                  />
+                </td>
+                <td
+                  class="border border-l-0 px-4 py-2"
+                  *ngFor="let date of dateRange"
+                >
+                  <input
+                    [(ngModel)]="detail[date]"
+                    (input)="onInputChange($event)"
+                    type="number"
+                    min="0"
+                    tabindex="1"
+                    (contextmenu)="
+                      onRightClick(
+                        $event,
+                        category.Category,
+                        subCategory.Category,
+                        i,
+                        date,
+                        detail[date]
+                      )
+                    "
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </td>
+                <td class="border">
+                  <button
+                    type="button"
+                    class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    (click)="
+                      removeSubCategory(
+                        category.Category,
+                        subCategory.Category,
+                        i
+                      )
+                    "
+                  >
+                    -
+                  </button>
+                </td>
+              </tr>
+            </ng-container>
+            <!-- add sub -->
+            <tr>
+              <td
+                class="px-4 py-2 border border-r"
+                [attr.colspan]="dateRange.length + 1"
+              >
+                <button
+                  type="button"
+                  class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  (click)="
+                    addSubCategory(category.Category, subCategory.Category)
+                  "
+                >
+                  add sub {{ subCategory.Category }}
+                </button>
+              </td>
+              <td class="border"></td>
+            </tr>
+            <tr>
+              <td class="font-semibold border border border-l-0 px-4 py-2">
+                Sub Total
+              </td>
+              <td
+                class="border border-l-0 px-4 py-2"
+                *ngFor="let date of dateRange"
+              >
+                {{ subCategory.Sum[date] }}
+              </td>
+              <td class="border"></td>
+            </tr>
+          </ng-container>
+          <!-- add parent -->
+          <tr>
+            <td
+              class="px-4 py-2 border border-r"
+              [attr.colspan]="dateRange.length + 2"
+            >
+              <button
+                type="button"
+                (click)="addParentCategory(category.Category)"
+                class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              >
+                Add Parent Category
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="category.Sum">
+            <td class="font-semibold border border border-l-0 px-4 py-2">
+              {{ category.Sum.Name }}
+            </td>
+            <td
+              class="font-semibold border border-l-0 px-4 py-2"
+              *ngFor="let date of dateRange"
+            >
+              {{ category.Sum[date] }}
+            </td>
+            <td class="border"></td>
+          </tr>
+        </tbody>
+      </ng-container>
+      <!-- total -->
+      <ng-container *ngIf="category.Type === 'total'">
+        <tbody>
+          <ng-container *ngFor="let subCategory of category.Details">
+            <ng-container *ngFor="let detail of subCategory.Details">
+              <tr>
+                <td class="font-semibold border border border-l-0 px-4 py-2">
+                  {{ detail.Category }}
+                </td>
+                <td
+                  class="font-semibold border border-l-0 px-4 py-2"
+                  *ngFor="let date of dateRange"
+                >
+                  {{ detail[date] }}
+                </td>
+              </tr>
+            </ng-container>
+          </ng-container>
+        </tbody>
+      </ng-container>
+    </ng-container>
+  </table>
+</div>
+<app-name-confirm
+  *ngIf="openModal"
+  (close)="closePopup()"
+  (confirm)="confirmAll()"
+></app-name-confirm>
