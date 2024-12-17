@@ -3,5 +3,5 @@ import { BudgetDetail } from './budget-detail';
 export interface BudgetCategory {
   Category: string;
   Type: string;
-  Details?: BudgetDetail[] | null;
+  Details?: any;
 }

@@ -20,7 +20,8 @@
           {{ detail.Category }}
         </td>
         <td class="border border-l-0 px-4 py-2" *ngFor="let date of dateRange">
-          <input
+          <input [(ngModel)]="detail[date]" (input)="onInputChange()" />
+          <!-- <input
             *ngIf="date === 'Jan'"
             [(ngModel)]="detail.Jan"
             (input)="onInputChange()"
@@ -79,7 +80,7 @@
             *ngIf="date === 'Dec'"
             [(ngModel)]="detail.Dec"
             (input)="onInputChange()"
-          />
+          /> -->
         </td>
       </tr>
       <tr>
